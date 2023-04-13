@@ -6790,44 +6790,5 @@ do
         return list
     end
 end
---custom stuffs
-function GetPlayerNames()
-    local names = {localplayer.Name}
-    for i, v in pairs(game.Players:GetPlayers()) do
-        if v ~= localplayer then
-            table.insert(names, v.Name)
-        end
-    end
-    return names
-end
-
--- create windows, and sections etc
-local gui = library:New({name = "dinguspaste", style = 1, size = Vector2.new(597, 600)})
-gui:Watermark({name = "niggggggeeeeeeerrrrrrr NIGGER HAXXXX 2023333"})
---[[
-     function window:Watermark(info)
-            window.watermark = {visible = false}
-            --
-            local info = info or {}
-            local watermark_name = info.name or info.Name or info.title or info.Title or window.wminfo
-]]
-gui.watermark:Update("Visible", true)
---[[
-     function window.watermark:Update(updateType, updateValue)
-                if updateType == "Visible" then
-                    window.watermark.visible = updateValue
-                    window.watermark:Visibility()
-                end
-            end
-]]
---[[
-    function window.watermark:Visibility()
-                watermark_outline.Visible = window.watermark.visible
-                watermark_inline.Visible = window.watermark.visible
-                watermark_frame.Visible = window.watermark.visible
-                watermark_accent.Visible = window.watermark.visible
-                watermark_title.Visible = window.watermark.visible
-            end
-]]
 
 return library, utility, library.pointers, theme
